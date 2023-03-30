@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/0d3f9b49a6.js" crossorigin="anonymous"></script>
+</head>
+<title>Les petits plats</title>
+</head>
+
+<body>
+
+  <!--HEADER-->
+  <header>
+    <img id="logo" src="Images/Logo.jpg" />
+    <h1>Les petits plats</h1>
+  </header>
+
+  <main>
+
+    <!--SEARCH BAR-->
+    <form id="searchBar">
+      <input class="searchInput" type="text" placeholder="Rechercher une recette" >
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+
+
+    <!--3 DROPDOWNS-->
+
+    <div id="dropdownsDisplay">
+
+      <!--DROPDOWN 1-->
+
+      <div class="dropdown">
+        <button class="dropdown-toggle ingredient" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Ingrédients <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu ingredient" aria-labelledby="dropdownMenuButton">
+          <input type="text" class="dropdown-input">
+        </div>
+      </div>
+
+
+      <!--DROPDOWN 2-->
+  
+      <div class="dropdown">
+        <button class="dropdown-toggle appareils" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Appareils <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu appareils" aria-labelledby="dropdownMenuButton">
+          <input type="text" class="dropdown-input">
+        </div>
+      </div>
+
+      <!--DROPDOWN 3-->
+
+      <div class="dropdown">
+        <button class="dropdown-toggle ustensiles" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Ustensiles <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu ustensiles" aria-labelledby="dropdownMenuButton">
+          <input type="text" class="dropdown-input">
+        </div>
+      </div>
+
+
+
+  </main>
+
+  <footer>
+
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>
