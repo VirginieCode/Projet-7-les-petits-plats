@@ -102,3 +102,62 @@ margin-bottom: 50px;
   .dropdown-menu.show input {
     visibility: visible;
   }
+
+  .recipeDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+  }
+
+  .recipeCard{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 364px;
+    margin: 20px;
+  }
+
+  .recipeCardImage{
+width: 380px;
+height: 178px;
+background-color: #C7BEBE;
+  }
+
+  .recipeCardInfos{
+width: 380px;
+height: 122px;
+background-color: #E7E7E7;
+padding-bottom: 10px;
+  }
+
+  .recipeNameAndTime{
+    display: flex;
+    align-items: center;
+  }
+
+.recipeName{
+  margin: 10px;
+}
+ 
+  .ingredientsAndDescription{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    width: 370px;
+    height: 90px;
+    margin: 10px;
+  }
+
+  .recipeDescription {
+    width: 175px;
+  max-height: 90;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    
+  }
+  
+  .recipeIngredients{
+    list-style: none;
+  }
