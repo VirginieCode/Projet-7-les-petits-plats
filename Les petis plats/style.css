@@ -2,6 +2,9 @@
 body{
     margin: 50px;
 }
+
+/*HEADER*/
+
 #logo{
     display: block;
     margin: 0 auto;
@@ -11,21 +14,44 @@ h1{
     font-family: DM Sans,sans-serif;
     color: #D04F4F;
 }
+
+/*SEARCH BAR*/
+
+.searchBarBox{
+  display: flex;
+  justify-content: center;
+}
+
 #searchBar{
     text-align: center;
     margin-bottom: 50px;
+    background-color: #E7E7E7 ;
+    width: 90% ;
 }
 .searchInput{
-    width: 80%;
+    width: 92%;
     height: 50px;
     border: none;
     border-radius: 5px;
     background-color: #E7E7E7 ;
+    outline: none;
 }
+button[type="submit"] {
+  width: 40px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*DROPDOWN*/
+
 #dropdownsDisplay{
 display: flex;
 justify-content: start;
 margin-bottom: 50px;
+margin-left: 70px;
 }
 
 .dropdown {
@@ -46,17 +72,7 @@ margin-bottom: 50px;
     cursor: pointer;
  
   }
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
+
   .dropdown-menu.show {
     display: block;
   }
@@ -78,12 +94,19 @@ margin-bottom: 50px;
     z-index: 1000;
     display: none;
     min-width: 100px;
+    padding: 10px;
+    border-top: none;
   }
-  
+
+  .dropdown-menu input{
+    padding: 3px;
+    font-size: 13px;
+  }
+
   .dropdown-menu.show {
-    display: block;
-    width: 149px;
-    height: 69px;
+
+    width: auto;
+    height: auto;
     margin-top: -20px;
     border-radius: 0 0 5px 5px;
   }
@@ -103,6 +126,11 @@ margin-bottom: 50px;
     visibility: visible;
   }
 
+  .dropdownIngredients{
+list-style: none;
+  }
+
+  /*RECETTES*/
   .recipeDisplay{
     display: flex;
     flex-wrap: wrap;
