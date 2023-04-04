@@ -37,13 +37,27 @@ searchBar.addEventListener('input', (event) => {
 let allRecipes = [];
 
 function filterRecipes(searchTerm) {
+  // Condition if pour vérifier la longueur de searchTerm
+  if (searchTerm.length < 3) {
+    displayRecipes(allRecipes); //Si inférieur à 3 alors toutes les recherches sont affichées
+    return;
+  }
+
+  // Sinon le filtrage commence
+
   const filteredRecipes = allRecipes.filter(recipe => {
-    const recipeName = recipe.name.toLowerCase();
-    return recipeName.includes(searchTerm);
+    const recipeName = recipe.name.toLowerCase(); 
+    const recipeDescription = recipe.description.toLowerCase();
+    
+    const ingredientsCheck= recipe.ingredients.some(ingredient => {
+      const ingredientName = ingredient.ingredient.toLowerCase();
+      return ingredientName.includes(searchTerm);
+    });
+    //Si la recherche inclus les caractères dans le nom, ingrédients ou description
+    return recipeName.includes(searchTerm) || ingredientsCheck || recipeDescription.includes(searchTerm); 
   });
   displayRecipes(filteredRecipes);
 }
-
 // Création des card des recettes
 
 function displayRecipes(recipes) {
