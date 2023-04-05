@@ -27,6 +27,7 @@ h1{
     margin-bottom: 50px;
     background-color: #E7E7E7 ;
     width: 90% ;
+    border-radius: 5px;
 }
 .searchInput{
     width: 92%;
@@ -73,13 +74,56 @@ margin-left: 70px;
  
   }
 
-  .dropdown-menu.show {
-    display: block;
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    padding: 10px;
+    border-top: none;
   }
-  
+
+
+  .dropdown-menu.show {
+
+    display: block;
+    width: auto;
+    height: auto;
+    margin-top: -20px;
+    border-radius: 5px}
+    
+
 .ingredient{
     background-color: #3282F7;
 }
+
+.dropdown-menu.ingredient.show {
+  display: flex;
+ flex-direction: column;
+ height: auto;
+ flex-wrap: wrap;
+ background-color: #3282F7;
+}
+
+.dropdown-menu.ingredient.show {
+  display: grid;
+  grid-template-rows: repeat(10, 30px);
+  grid-auto-flow: column;
+  column-gap: 50px;
+  max-height: auto;
+  overflow: hidden;
+}
+
+
+
+.eachIngredient{
+  list-style: none;
+  cursor: pointer;
+   white-space: nowrap;
+  
+}
+
 .appareils{
     background-color: #68D9A4;
 }
@@ -87,33 +131,10 @@ margin-left: 70px;
     background-color: #ED6454;
 }
   
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    min-width: 100px;
-    padding: 10px;
-    border-top: none;
-  }
-
-  .dropdown-menu input{
-    padding: 3px;
-    font-size: 13px;
-  }
-
-  .dropdown-menu.show {
-
-    width: auto;
-    height: auto;
-    margin-top: -20px;
-    border-radius: 0 0 5px 5px;
-  }
-
   .dropdown-input {
     width: 100%;
     padding: 5px;
+    font-size: 13px;
     margin-top: 5px;
     border-radius: 3px;
     box-sizing: border-box;
@@ -124,10 +145,6 @@ margin-left: 70px;
   
   .dropdown-menu.show input {
     visibility: visible;
-  }
-
-  .dropdownIngredients{
-list-style: none;
   }
 
   /*RECETTES*/
